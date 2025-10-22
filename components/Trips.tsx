@@ -12,20 +12,18 @@ const Trips = () => {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (selectedTrip && modalRef.current) {
-      const hammer = new Hammer(modalRef.current);
+  if (selectedTrip && modalRef.current) {
+    import('hammerjs').then(Hammer => {
+      const hammer = new Hammer.default(modalRef.current!);
 
       hammer.get('swipe').set({ direction: Hammer.DIRECTION_DOWN });
 
-      hammer.on('swipedown', () => {
-        setSelectedTrip(null);
-      });
+      hammer.on('swipedown', () => setSelectedTrip(null));
 
-      return () => {
-        hammer.destroy();
-      };
-    }
-  });
+      return () => hammer.destroy();
+    });
+  }
+});
 
     interface Trip {
       date: string;
