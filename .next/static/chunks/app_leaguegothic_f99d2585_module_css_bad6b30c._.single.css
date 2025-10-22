@@ -1,0 +1,25 @@
+/* [project]/app/leaguegothic_f99d2585.module.css [app-client] (css) */
+@font-face {
+  font-family: leagueGothic;
+  src: url("../media/LeagueGothic_Italic-s.p.7484e126.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: leagueGothic Fallback;
+  src: local(Arial);
+  ascent-override: 150.76%;
+  descent-override: 42.73%;
+  line-gap-override: 0.0%;
+  size-adjust: 62.02%;
+}
+
+.leaguegothic_f99d2585-module__NaS_-G__className {
+  font-family: leagueGothic, leagueGothic Fallback;
+}
+
+.leaguegothic_f99d2585-module__NaS_-G__variable {
+  --font-league-gothic-italic: "leagueGothic", "leagueGothic Fallback";
+}
+
+/*# sourceMappingURL=app_leaguegothic_f99d2585_module_css_bad6b30c._.single.css.map*/
